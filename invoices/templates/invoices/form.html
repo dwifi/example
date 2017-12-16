@@ -1,0 +1,33 @@
+ {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/main.css'}"/>
+    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap-theme.min.css' %}" rel="stylesheet">
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Print an invoice and get rich</title>
+
+
+  </head>
+  <body>
+    <div class="container">
+        <h1>Print an invoice and get rich (no guarantee)</h1>
+        <p>
+            Fill out the form below and get a brand new document with your data!
+        </p>
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button type="submit" class="btn btn-lg btn-success">Get my document!</button>
+        </form>
+    </div>
+
+
+  </body>
+</html>
