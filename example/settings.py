@@ -28,9 +28,9 @@ def path(*bits):
 SECRET_KEY = '+j3$qetw$tx^6)db-es91#@2!ru5j!7mfahym)b&j1z0eamlm5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
